@@ -42,6 +42,7 @@ st.divider()
 with st.sidebar:
     st.header("Settings")
     groq_api_key = st.text_input("Groq API Key", type="password", placeholder="gsk_...")
+    st.markdown("Get a free API key at [console.groq.com](https://console.groq.com)")
     top_k = st.slider("Chunks to retrieve (top K)", min_value=1, max_value=7, value=3)
     chunk_size = st.select_slider("Chunk size", options=[256, 512, 1024], value=512)
     st.divider()
